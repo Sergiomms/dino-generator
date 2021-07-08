@@ -15,7 +15,7 @@ const fetch = require('node-fetch');
 //referenciando a pasta onde estarão os arquivos estaticos (html e css)
 app.use(express.static('public'));
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 });
 
